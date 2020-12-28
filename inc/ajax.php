@@ -42,6 +42,7 @@ function graffiti_load_more()
                 $type = "tag";
                 $key = "tag";
                 break;
+
             case $flipped["author"]:
                 $type = "author";
                 $key = "author";
