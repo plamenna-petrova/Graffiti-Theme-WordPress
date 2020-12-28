@@ -161,8 +161,10 @@ jQuery(document).ready(function ($) {
         var el_bottom = el_top + el_height;
         return ((el_bottom - el_height * 0.25 > scroll_pos) && (el_top < (scroll_pos + 0.5 * window_height)));
     }
-
 });
+
+
+
 
 
 

@@ -1,108 +1,31 @@
 <?php
 
 /*
-    @package graffititheme
-    ===================
-        AJAX FUNCTION
-    ===================
- */
 
-add_action('wp_ajax_nopriv_graffiti_load_more', 'graffiti_load_more');
-add_action('wp_ajax_graffiti_load_more', 'graffiti_load_more');
+@package graffititheme
 
-//sunset_save_user_contact_form
-//add_action('wp_ajax_nopriv_sunset_save_user_contact_form', 'sunset_save_contact');
-//add_action('wp_ajax_sunset_save_user_contact_form', 'sunset_save_contact');
+	========================
+		REMOVE GENERATOR VERSION NUMBER
+	========================
+*/
 
-function graffiti_load_more()
-{
-    $paged = $_POST["page"] + 1;
-    $prev = $_POST["prev"];
-    $archive = $_POST["archive"];
+/* remove version string from js and css */
+function graffiti_remove_wp_version_strings( $src ) {
 
-    if( $prev == 1 && $_POST["page"] != 1){
-        $paged = $_POST["page"] - 1;
+    global $wp_version;
+    parse_str( parse_url($src, PHP_URL_QUERY), $query );
+    if ( !empty( $query['ver'] ) && $query['ver'] === $wp_version ) {
+        $src = remove_query_arg( 'ver', $src );
     }
+    return $src;
 
-    $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'paged'     => $paged
-    );
-
-    if( $archive != '0'){
-
-        $archVal = explode( '/', $archive);
-        $flipped = array_flip($archVal);
-
-        switch ( isset($flipped) ) {
-            case $flipped["category"]:
-                $type = "category_name";
-                $key = "category";
-                break;
-
-            case $flipped["tag"]:
-                $type = "tag";
-                $key = "tag";
-                break;
-            case $flipped["author"]:
-                $type = "author";
-                $key = "author";
-                break;
-        }
-
-        $currKey = array_keys($archVal, $key);
-        $nextKey = $currKey[0]+1;
-        $value = $archVal[ $nextKey];
-
-        $args[ $type] = $value;
-
-        //check page trail and remove "page" value
-        if( isset( $flipped["page"], $archVal ) ){
-            $pageVal    = explode("page", $archive);
-            $page_trail = $pageVal[0];
-        }else{
-            $page_trail = $archive;
-        }
-
-    }else{
-        $page_trail = get_site_url().'/';
-    }
-
-    $query = new WP_Query($args);
-
-    if( $query->have_posts() ):
-
-        echo '<div class="page-limit" data-page="'.$page_trail.'page/'.$paged.'">';
-
-        while( $query->have_posts() ): $query->the_post();
-            get_template_part('template-parts/content', get_post_format() );
-        endwhile;
-
-        echo '</div>';
-    else:
-
-        echo 0;
-
-    endif;
-
-    wp_reset_postdata();
-
-    die();
 }
 
-function graffiti_check_paged($num = null)
-{
-    $output = '';
+add_filter( 'script_loader_src', 'graffiti_remove_wp_version_strings' );
+add_filter( 'style_loader_src', 'graffiti_remove_wp_version_strings' );
 
-    if( is_paged() ){ $output = 'page/' . get_query_var( 'paged' ); }
-
-    if( $num == 1 ){
-        $paged = ( get_query_var( 'paged' ) == 0 ? 1 : get_query_var( 'paged' ) );
-        return $paged;
-    } else {
-        return $output;
-    }
-
-
+/* remove metatag generator from header */
+function graffiti_remove_meta_version() {
+    return '';
 }
+add_filter( 'the_generator', 'graffiti_remove_meta_version' );
