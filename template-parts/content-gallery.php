@@ -1,0 +1,127 @@
+<?php
+
+global $detect;
+/*
+@package graffititheme
+    ===================
+        GALLERY POST FORMAT
+    ===================
+*/
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class('graffiti-format-gallery'); ?> >
+    <header class="entry-header text-center">
+
+        <?php
+
+        if( graffiti_get_attachment()  ):
+            $attachments = graffiti_get_attachment();
+            ?>
+            <div id="postGallery<?php the_ID(); ?>" class="carousel slide carousel-fade graffiti-carousel-thumb" data-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <?php
+                    $count = count($attachments) - 1;
+                    for($i = 0; $i <= $count; $i++):
+                        $active = ($i == 0 ? 'active' : '');
+
+                        $n = ($i == $count ? 0 : $i+1);
+                        $nextImage = $attachments[$n];
+                        $p = ($i == 0 ? $count : $i-1);
+                        $prevImage = $attachments[$p];
+                        ?>
+
+                        <div class="carousel-item <?php echo $active; ?> background-image standard-featured" style="background-image:url(<?php  echo $attachments[$i]; ?>);">
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>
+                                    <?php
+                                      $postCaption = get_post( get_the_ID() ); //get the post object
+                                      $contentCaption = $postCaption->post_content; //we need just the content
+                                      $regexCaption = '/<figcaption[\w\s]*[^>]*(.*?)<\/figcaption>/'; // we need an expression to match things
+                                      preg_match_all( $regexCaption, $contentCaption, $matchesCaption );
+                                      if(!empty( $matchesCaption[0][$i]) ){
+                                          print_r($matchesCaption[0][$i]);
+                                      }else{
+                                          echo '';
+                                      }
+                                    ?>
+                                </h5>
+                            </div>
+
+                            <div class="hide next-image-preview" data-image="<?php echo $nextImage; ?>"></div>
+                            <div class="hide prev-image-preview" data-image="<?php echo $prevImage; ?>"></div>
+
+<!--                            <div class="entry-excerpt image-caption">-->
+<!--                                <p>--><?php //echo $attachments[$i]->post_excerpt; ?><!--</p>-->
+<!--                            </div>-->
+
+                        </div><!-- .carousel-item -->
+
+                    <?php
+                       endfor;
+                    ?>
+
+                </div><!-- .carousel-inner -->
+
+                <!-- Carousel Control -->
+                <a class="left carousel-control-prev" href="#postGallery<?php the_ID(); ?>" role="button" data-slide="prev">
+                    <div class="table">
+                        <div class="table-cell">
+
+                            <div class="preview-container">
+                                <span class="thumbnail-container background-image"></span>
+                                <span class="sunset-icon sunset-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </div><!-- .preview-container -->
+
+                        </div><!-- .table-cell -->
+                    </div><!-- .table-->
+                </a>
+
+                <a class="right carousel-control-next" href="#postGallery<?php the_ID(); ?>" role="button" data-slide="next">
+                    <div class="table">
+                        <div class="table-cell">
+
+                            <div class="preview-container">
+                                <span class="thumbnail-container background-image"></span>
+                                <span class="sunset-icon sunset-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </div><!-- .preview-container -->
+
+                        </div><!-- .table-cell -->
+                    </div><!-- .table -->
+                </a>
+                <!-- End Carousel Control -->
+
+            </div><!-- .carousel -->
+
+        <?php endif; ?>
+
+
+        <?php the_title('<h1 class="entry-title"><a href="'. esc_url(get_permalink() ) .'" rel="bookmark">', '</a></h1>'); ?>
+
+        <div class="entry-meta">
+            <?php echo graffiti_posted_meta(); ?>
+        </div>
+
+    </header>
+
+    <div class="entry-content">
+
+        <div class="entry-excerpt">
+            <?php the_excerpt(); ?>
+        </div>
+
+        <div class="button-container text-center">
+            <a href="<?php the_permalink(); ?>" class="btn btn-graffiti">
+                <?php _e( 'Read More'); ?>
+            </a>
+        </div>
+    </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <?php echo graffiti_posted_footer(); ?>
+    </footer>
+</article>
