@@ -22,7 +22,8 @@ get_header();
 
                                 get_template_part('template-parts/single', get_post_format());
 
-                                the_post_navigation();
+                                echo graffiti_post_navigation();
+                                //the_post_navigation();
 
                                 if (comments_open()):
 
