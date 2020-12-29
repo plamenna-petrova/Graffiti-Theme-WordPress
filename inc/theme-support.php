@@ -152,15 +152,17 @@ function graffiti_get_embedded_media($type = array())
     return $output;
 }
 
-function graffiti_grab_url() {
-    if( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/i', get_the_content(), $links ) ) {
+function graffiti_grab_url()
+{
+    if (!preg_match('/<a\s[^>]*?href=[\'"](.+?)[\'"]/i', get_the_content(), $links)) {
         return false;
     }
-    return esc_url_raw( $links[1] );
+    return esc_url_raw($links[1]);
 }
 
-function graffiti_grab_current_uri() {
-    $http = ( isset ( $_SERVER["HTTPS"] ) ? 'https://' : 'http://' );
+function graffiti_grab_current_uri()
+{
+    $http = (isset ($_SERVER["HTTPS"]) ? 'https://' : 'http://');
     $referer = $http . $_SERVER["HTTP_HOST"];
     $archive_url = $referer . $_SERVER["REQUEST_URI"];
 
@@ -174,19 +176,44 @@ function graffiti_grab_current_uri() {
    ===============================
 */
 
-function graffiti_post_navigation() {
+function graffiti_post_navigation()
+{
 
     $nav = '<div class="row">';
 
     $prev = get_previous_post_link('<div class="post-link-nav"><span class="sunset-icon sunset-chevron-left" aria-hidden="true"></span> %link</div>', '%title');
-    $nav .= '<div class="col-xs-12 col-sm-6">'. $prev .'</div>';
+    $nav .= '<div class="col-xs-12 col-sm-6">' . $prev . '</div>';
 
     $next = get_next_post_link('<div class="post-link-nav">%link <span class="sunset-icon sunset-chevron-right" aria-hidden="true"></span></div>', '%title');
-    $nav .= '<div class="col-xs-12 col-sm-6 text-right">'.$next.'</div>';
+    $nav .= '<div class="col-xs-12 col-sm-6 text-right">' . $next . '</div>';
 
     $nav .= '</div>';
 
     return $nav;
 
 }
+
+function graffiti_share_this($content)
+{
+    if (is_single()):
+        $content .= '<div class="graffiti-shareThis"><h4>Share This</h4>';
+        $title = get_the_title();
+        $permalink = get_permalink();
+
+        $twitterHandler = (get_option('twitter_handler') ? '&amp;via=' . esc_attr(get_option('twitter_handler')) : '');
+
+        $twitter = 'https://twitter.com/intent/tweet?text=Hey ! read this: ' . $title . '&amp;url=' . $permalink . $twitterHandler . '';
+        $facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $permalink;
+
+        $content .= '<ul>';
+        $content .= '<li><a href="' . $twitter . '" target="_blank" rel="nofollow"><span class="sunset-icon sunset-twitter"></span></a></li>';
+        $content .= '<li><a href="' . $facebook . '" target="_blank" rel="nofollow"><span class="sunset-icon sunset-facebook"></span></a></li>';
+        $content .= '</ul></div><!-- .sunset-shareThis -->';
+        return $content;
+    else:
+        return $content;
+    endif;
+}
+
+add_filter('the_content', 'graffiti_share_this');
 
