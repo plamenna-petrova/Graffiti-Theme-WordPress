@@ -863,7 +863,7 @@ audio {
 .graffiti-shareThis {
   display: block;
   text-align: center;
-  border-top: 2px solid #333333;
+  border-top: 4px solid #333333;
   padding-top: 10px;
   clear: both;
 
@@ -892,6 +892,45 @@ audio {
     }
   }
 }
+
+/*
+	Comment section
+	=========================================
+*/
+
+.comments-area {
+  border-top: 4px solid black;
+  margin-top: 40px;
+
+  .comments-title {
+    margin-top: 20px;
+  }
+
+  .comment-reply-title {
+    margin-top: 20px;
+  }
+
+  .logged-in-as {
+    font-size: 20px;
+  }
+
+  .comment-form-comment {
+
+    label {
+      font-size: 20px;
+    }
+
+  }
+
+  .comment-notes {
+    font-size: 20px;
+  }
+}
+
+.last-field {
+  margin-bottom: 50px;
+}
+
 
 
 

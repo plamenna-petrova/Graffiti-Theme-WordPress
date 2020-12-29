@@ -39,6 +39,9 @@ function graffiti_register_nav_menu()
 
 add_action('after_setup_theme', 'graffiti_register_nav_menu');
 
+/* Activate HTML5 features */
+add_theme_support( 'html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
 /*
    ==============================
 	 BLOG LOOP CUSTOM FUNCTIONS
@@ -216,4 +219,13 @@ function graffiti_share_this($content)
 }
 
 add_filter('the_content', 'graffiti_share_this');
+
+function graffiti_get_post_navigation() {
+
+//    if( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+
+        require( get_template_directory() . '/inc/templates/graffiti-comment-nav.php' );
+
+//    endif;
+}
 
