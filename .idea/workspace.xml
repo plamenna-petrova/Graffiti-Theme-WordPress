@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Added Single Blog Post">
-      <change afterPath="$PROJECT_DIR$/inc/shortcodes.php" afterDir="false" />
+    <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Integrated Tooltip shortcode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/graffiti.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/graffiti.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/shortcodes.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/shortcodes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/graffiti.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/graffiti.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +100,7 @@
       <workItem from="1609165229369" duration="15565000" />
       <workItem from="1609233815711" duration="840000" />
       <workItem from="1609234830461" duration="3671000" />
-      <workItem from="1609239993140" duration="881000" />
+      <workItem from="1609239993140" duration="1986000" />
     </task>
     <task id="LOCAL-00001" summary="Styled Load Previous Infinite Scroll">
       <created>1609147675978</created>
@@ -124,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609193796508</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Integrated Tooltip shortcode">
+      <created>1609241562874</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609241562874</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +152,8 @@
     <MESSAGE value="Styled Load Previous Infinite Scroll" />
     <MESSAGE value="Improved pagination and added dynamic archive" />
     <MESSAGE value="Added Single Blog Post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Single Blog Post" />
+    <MESSAGE value="Integrated Tooltip shortcode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated Tooltip shortcode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="69" key="#PHP" timestamp="1607117986201">
@@ -181,10 +188,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="337" y="73" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609145330349" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609193799828">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609241565398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609193799828" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609241565398" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609187625997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

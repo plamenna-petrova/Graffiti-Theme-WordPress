@@ -888,11 +888,17 @@ audio {
   line-height: 1.8em;
   text-align: justify;
 }
-.entry-content a, .entry-content .graffiti-tooltip {
+.entry-content a,
+.entry-content .graffiti-tooltip,
+.entry-content .graffiti-popover {
   cursor: pointer;
   color: red;
 }
-.entry-content a:hover, .entry-content a:focus, .entry-content .graffiti-tooltip:hover, .entry-content .graffiti-tooltip:focus {
+.entry-content a:hover, .entry-content a:focus,
+.entry-content .graffiti-tooltip:hover,
+.entry-content .graffiti-tooltip:focus,
+.entry-content .graffiti-popover:hover,
+.entry-content .graffiti-popover:focus {
   color: red;
 }
 .entry-content p {

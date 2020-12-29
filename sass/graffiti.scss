@@ -813,7 +813,9 @@ audio {
   line-height: 1.8em;
   text-align: justify;
 
-  a, .graffiti-tooltip {
+  a,
+  .graffiti-tooltip,
+  .graffiti-popover {
     cursor: pointer;
     color: red;
 
