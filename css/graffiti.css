@@ -882,11 +882,18 @@ audio {
 */
 .entry-content {
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 23px;
   letter-spacing: 0.02em;
   font-weight: 300;
-  line-height: 1.7em;
+  line-height: 1.8em;
   text-align: justify;
+}
+.entry-content a, .entry-content .graffiti-tooltip {
+  cursor: pointer;
+  color: red;
+}
+.entry-content a:hover, .entry-content a:focus, .entry-content .graffiti-tooltip:hover, .entry-content .graffiti-tooltip:focus {
+  color: red;
 }
 .entry-content p {
   margin-bottom: 15px;
@@ -894,6 +901,10 @@ audio {
 .entry-content b,
 .entry-content strong {
   font-weight: 500;
+}
+
+.clearfix {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=graffiti.css.map */

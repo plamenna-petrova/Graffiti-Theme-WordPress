@@ -807,11 +807,21 @@ audio {
 
 .entry-content {
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 23px;
   letter-spacing: 0.02em;
   font-weight: 300;
-  line-height: 1.7em;
+  line-height: 1.8em;
   text-align: justify;
+
+  a, .graffiti-tooltip {
+    cursor: pointer;
+    color: red;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
 
   p {
     margin-bottom: 15px;
@@ -822,6 +832,12 @@ audio {
     font-weight: 500;
   }
 }
+
+.clearfix {
+  text-align: justify;
+}
+
+
 
 
 
