@@ -130,6 +130,8 @@ function graffiti_save_contact(){
 
     echo $postID;
 
+    //echo 0
+
     die();
 
 }
