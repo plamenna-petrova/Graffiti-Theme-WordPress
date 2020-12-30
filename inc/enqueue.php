@@ -9,28 +9,67 @@
 	==============================
 */
 
-function graffiti_load_admin_scripts( $hook ){
-	
-	if( 'toplevel_page_petrova_graffiti' == $hook ) {
+//function graffiti_load_admin_scripts( $hook ){
+//
+//	if( 'toplevel_page_petrova_graffiti' == $hook ) {
+//
+//       // echo $hook;
+//
+//        wp_register_style('graffiti_admin', get_template_directory_uri() . '/css/graffiti.admin.css', array(), '1.0.0', 'all');
+//        wp_enqueue_style('graffiti_admin');
+//
+//        wp_enqueue_media();
+//
+//        wp_register_script('graffiti-admin-script', get_template_directory_uri() . '/js/graffiti.admin.js', array('jquery'), '1.0.0', true);
+//        wp_enqueue_script('graffiti-admin-script');
+//    } else if ( 'graffiti_page_petrova_graffiti_css' == $hook ) {
+//
+//	    wp_enqueue_style('ace', get_template_directory_uri() . '/css/graffiti.ace.css', array(), '1.0.0', 'all');
+//
+//	    wp_enqueue_script('ace', get_template_directory_uri() . '/js/ace/ace.js', array('jquery'), '1.2.1', true);
+//	    wp_enqueue_script('graffiti-custom-css-script', get_template_directory_uri(). '/js/graffiti.custom_css.js', array('jquery'), '1.0.0', true);
+//    } else { return; }
+//}
+//add_action( 'admin_enqueue_scripts', 'graffiti_load_admin_scripts' );
 
-       // echo $hook;
+function graffiti_load_admin_scripts( $hook )
+{
+    // echo $hook; //check your file hook page administration
 
-        wp_register_style('graffiti_admin', get_template_directory_uri() . '/css/graffiti.admin.css', array(), '1.0.0', 'all');
+    //register css admin section
+    wp_register_style( 'sedgwick-admin', 'https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display' );
+    wp_register_style('graffiti_admin', get_template_directory_uri(). '/css/graffiti.admin.css', array(), '1.0.0', 'all');
+    //register js admin section
+    wp_register_script('graffiti-admin-script', get_template_directory_uri(). '/js/graffiti.admin.js', array('jquery'), '1.0.0', true);
+
+    //PAGE ARRAY
+    $pages_array = array(
+        'toplevel_page_petrova_graffiti',
+        'graffiti_page_petrova_graffiti_theme',
+        'graffiti_page_petrova_graffiti_theme_contact',
+        'graffiti_page_petrova_graffiti_css'
+    );
+
+    //PHP 7
+    if( in_array($hook, $pages_array)){
+        wp_enqueue_style( 'sedgwick-admin' );
         wp_enqueue_style('graffiti_admin');
+    }
 
+    if('toplevel_page_petrova_graffiti' == $hook){
         wp_enqueue_media();
-
-        wp_register_script('graffiti-admin-script', get_template_directory_uri() . '/js/graffiti.admin.js', array('jquery'), '1.0.0', true);
         wp_enqueue_script('graffiti-admin-script');
-    } else if ( 'graffiti_page_petrova_graffiti_css' == $hook ) {
 
-	    wp_enqueue_style('ace', get_template_directory_uri() . '/css/graffiti.ace.css', array(), '1.0.0', 'all');
+    }elseif ('graffiti_page_petrova_graffiti_css' == $hook) {
+        wp_enqueue_style('ace', get_template_directory_uri(). '/css/graffiti.ace.css', array(), '1.0.0', 'all');
 
-	    wp_enqueue_script('ace', get_template_directory_uri() . '/js/ace/ace.js', array('jquery'), '1.2.1', true);
-	    wp_enqueue_script('graffiti-custom-css-script', get_template_directory_uri(). '/js/graffiti.custom_css.js', array('jquery'), '1.0.0', true);
-    } else { return; }
+        wp_enqueue_script('ace', get_template_directory_uri(). '/js/ace/ace.js', array('jquery'), '1.2.1', true);
+        wp_enqueue_script('graffiti-custom-css-script', get_template_directory_uri(). '/js/graffiti.custom_css.js', array('jquery'), '1.0.0', true);
+
+    }
 }
-add_action( 'admin_enqueue_scripts', 'graffiti_load_admin_scripts' );
+
+add_action('admin_enqueue_scripts', 'graffiti_load_admin_scripts');
 
 /*
     ==================================

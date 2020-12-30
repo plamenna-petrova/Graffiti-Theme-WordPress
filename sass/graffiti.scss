@@ -1014,6 +1014,15 @@ audio {
     font-size: 15px;
   }
 
+  .comment-edit-link {
+    color: black;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+
 }
 
 .comment-content {
@@ -1138,8 +1147,9 @@ a.comment-reply-link {
 
   ul {
     list-style: none;
-    margin: 0;
+    //margin: 0;
     padding: 0;
+    margin-left: 25%;
   }
 
   li {
@@ -1158,7 +1168,8 @@ h2.widgettitle {
   padding: 10px;
   border-radius: 20px;
   line-height: 1.2em;
-  margin-bottm: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   letter-spacing: 0.2px;
 }
 
@@ -1180,6 +1191,7 @@ h2.widgettitle {
 // Categories Widget
 .cat-item {
   position: relative;
+  display: flex;
 
   a,
   span {
@@ -1189,7 +1201,8 @@ h2.widgettitle {
   }
 
   a {
-    padding: 4px 0;
+    padding: 2px 0;
+    margin-right: 10px;
   }
 
   span {
@@ -1223,10 +1236,23 @@ h2.widgettitle {
       font-size: 18px;
       padding-bottom: 4px;
       margin-bottom: 2px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 3px solid rgba(255, 255, 255, 0.06);
       text-transform: none;
     }
 
+  }
+}
+
+//Popular Posts
+.media {
+  padding-bottom: 10px;
+
+  .media-left {
+    padding-right: 10px;
+  }
+
+  .media-body {
+    font-size: 20px;
   }
 }
 
