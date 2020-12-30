@@ -1,57 +1,80 @@
 /*
 	@package graffititheme
 */
+/*
+	Import
+	------------------------------------------------
+*/
+#wpcontent {
+  font-family: "Sedgwick Ave Display", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, .form-table th, .form-wrap label {
+  font-weight: 500;
+}
+
 .graffiti-general-form,
-.graffiti-sidebar-preview { 
-	display: inline-block; 
-	float: left; 
+.graffiti-sidebar-preview {
+  display: inline-block;
+  float: left;
 }
 
-.graffiti-sidebar-preview { 
-	width: 280px; 
-	background-color: #1F1F1F; 
-	padding: 20px; 
-	text-align: center; 
-	margin-right: 20px; 
+.graffiti-sidebar-preview {
+  width: 280px;
+  background-color: #1F1F1F;
+  padding: 20px;
+  text-align: center;
+  margin-right: 20px;
 }
 
-.graffiti-sidebar { 
-	display: block; 
-	text-align: center; 
+.graffiti-sidebar {
+  display: block;
+  text-align: center;
 }
 
-h1.graffiti-username, 
-h2.graffiti-description { 
-	font-weight: 100; 
-	color: #fff; 
+h1.graffiti-username,
+h2.graffiti-description {
+  font-weight: 100;
+  color: #fff;
 }
 
-h1.graffiti-username { 
-	font-size: 24px; 
-	margin: 0 0 10px; 
-	font-weight: bold;
+h1.graffiti-username {
+  font-size: 24px;
+  margin: 0 0 10px;
 }
 
-h2.graffiti-description { 
-	font-size: 18px; 
-	margin: 0 0 20px; 
-	font-weight: bold;
+h2.graffiti-description {
+  font-size: 20px;
+  margin: 0 0 20px;
 }
 
-.image-container { 
-	display: block; 
-	width: 100%; 
-	overflow: hidden; 
-	text-align: center; 
+.graffiti-icon-sidebar {
+  color: white;
+  margin: 0 2px;
+}
+.graffiti-icon-sidebar:before {
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
 }
 
-.profile-picture { 
-	width: 250px; 
-	height: 250px; 
-	overflow: hidden; 
-	border-radius: 50%; 
-	margin: 20px auto; 
-	background-position: center center; 
-	background-repeat: no-repeat; 
-	background-size: cover; 
+.image-container {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
 }
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=graffiti.admin.css.map */

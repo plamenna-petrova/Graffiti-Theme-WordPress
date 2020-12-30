@@ -44,6 +44,29 @@ add_theme_support( 'html5', array('comment-list', 'comment-form', 'search-form',
 
 /*
    ==============================
+	SIDEBAR FUNCTIONS
+   ===============================
+*/
+
+function graffiti_sidebar_init()
+{
+    register_sidebar(
+        array(
+            'name'          => esc_html__( 'Graffiti Sidebar', 'graffititheme'),
+            'id'            => 'graffiti-sidebar',
+            'description'   => 'Dynamic Sidebar Right',
+            'before_widget' => '<section id="%1$s" class="graffiti-widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_widget' => '<h2 class="graffiti-widget-title">',
+            'after_widget'  => '</h2>'
+        )
+    );
+}
+
+add_action( 'widgets_init', 'graffiti_sidebar_init');
+
+/*
+   ==============================
 	 BLOG LOOP CUSTOM FUNCTIONS
    ===============================
 */
@@ -228,4 +251,6 @@ function graffiti_get_post_navigation() {
 
 //    endif;
 }
+
+
 

@@ -274,6 +274,50 @@ img.aligncenter {
   /* Above WP toolbar. */
 }
 
+h1.graffiti-username,
+h2.graffiti-description {
+  font-weight: 100;
+  color: #fff;
+}
+
+h1.graffiti-username {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+h2.graffiti-description {
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.graffiti-icon-sidebar {
+  color: white;
+  margin: 0 2px;
+}
+.graffiti-icon-sidebar:before {
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+}
+
+.image-container {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* 
 	Generic 
 	------------------------------------------------
@@ -281,6 +325,11 @@ img.aligncenter {
 body {
   font-family: "Sedgwick Ave Display", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
   background-color: azure;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body.no-scroll {
+  overflow-y: hidden;
 }
 
 .header-container {
@@ -833,6 +882,7 @@ audio {
   margin-top: 40px;
   display: block;
   color: white;
+  font-size: 22px;
 }
 
 /*
@@ -1095,6 +1145,172 @@ a.comment-reply-link:hover, a.comment-reply-link:focus {
 
 .comment-respond {
   margin-top: 60px;
+}
+
+/*
+	Sidebar section
+	=========================================
+*/
+.graffiti-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 3;
+  display: none;
+  cursor: e-resize;
+}
+
+.graffiti-sidebar {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f1f1f;
+  color: #fff;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  -webkit-transition: transform 320ms ease;
+  -moz-transition: transform 320ms ease;
+  -ms-transition: transform 320ms ease;
+  -o-transition: transform 320ms ease;
+  transition: transform 320ms ease;
+}
+.graffiti-sidebar.sidebar-closed {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.graffiti-sidebar a {
+  color: #ffffff;
+}
+.graffiti-sidebar a:hover, .graffiti-sidebar a:focus {
+  color: red;
+}
+
+.graffiti-sidebar-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 40px 10px 20px;
+}
+
+.sidebar-scroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sidebar-close,
+.sidebar-open {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar-open {
+  left: auto;
+  right: 20px;
+  top: 20px;
+}
+.sidebar-open span {
+  color: #fff;
+}
+
+/*
+    Widgets section
+	=========================================
+*/
+.widget-area {
+  letter-spacing: 0.2px;
+  margin-bottom: 25px;
+}
+.widget-area ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.widget-area li {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+h2.widgettitle {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  background-color: #303030;
+  padding: 10px;
+  border-radius: 20px;
+  line-height: 1.2em;
+  margin-bottm: 20px;
+  letter-spacing: 0.2px;
+}
+
+.tagcloud {
+  text-align: center;
+}
+.tagcloud a {
+  display: inline-block;
+  background-color: #7d7d7d;
+  padding: 1px 9px;
+  border-radius: 10px;
+  color: #eeeeee;
+  margin: 3px;
+}
+
+.cat-item {
+  position: relative;
+}
+.cat-item a,
+.cat-item span {
+  display: block;
+  line-height: 1em;
+  font-size: 20px;
+}
+.cat-item a {
+  padding: 4px 0;
+}
+.cat-item span {
+  position: absolute;
+  right: 25px;
+  top: 2px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 2px 7px 5px;
+  background-color: #7D7D7D;
+  border-radius: 10px;
+}
+
+.recentcomments {
+  font-size: 18px;
+  color: #ccc;
+}
+.recentcomments a {
+  text-transform: uppercase;
+}
+.recentcomments span, .recentcomments span a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-transform: none;
 }
 
 /*# sourceMappingURL=graffiti.css.map */

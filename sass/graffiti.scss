@@ -6,6 +6,7 @@
 	Import
 	------------------------------------------------
 */
+
 @import 'base/variables';
 //variables
 @import 'base/mixins';
@@ -16,6 +17,9 @@
 //font icons
 @import 'base/wordpress';
 //wordpress default classes
+@import 'admin/sidebar';
+//admin classes
+
 
 
 /* 
@@ -26,6 +30,13 @@ body {
   font-family: $body-font;
   background-color: azure;
   //background-color: red;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.no-scroll{
+    overflow-y: hidden;
+  }
 }
 
 .header-container {
@@ -737,6 +748,7 @@ audio {
   margin-top: 40px;
   display: block;
   color: white;
+  font-size: 22px;
 }
 
 /*
@@ -1031,6 +1043,195 @@ a.comment-reply-link {
 .comment-respond {
   margin-top: 60px;
 }
+
+/*
+	Sidebar section
+	=========================================
+*/
+
+.graffiti-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 3;
+  display: none;
+  cursor: e-resize;
+}
+
+.graffiti-sidebar {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f1f1f;
+  color: #fff;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  @include animate(transform, 320ms);
+
+  &.sidebar-closed {
+    @include transform(translateX(100%));
+  }
+
+  a {
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+
+}
+
+.graffiti-sidebar-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 40px 10px 20px;
+}
+
+.sidebar-scroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sidebar-close,
+.sidebar-open {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar-open {
+  left: auto;
+  right: 20px;
+  top: 20px;
+
+  span {
+    color: #fff;
+  }
+
+}
+
+/*
+    Widgets section
+	=========================================
+*/
+
+.widget-area {
+  letter-spacing: 0.2px;
+  margin-bottom: 25px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+h2.widgettitle {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  background-color: #303030;
+  padding: 10px;
+  border-radius: 20px;
+  line-height: 1.2em;
+  margin-bottm: 20px;
+  letter-spacing: 0.2px;
+}
+
+// Tags Cloud Widget
+.tagcloud {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    background-color: #7d7d7d;
+    padding: 1px 9px;
+    border-radius: 10px;
+    color: #eeeeee;
+    margin: 3px;
+  }
+
+}
+
+// Categories Widget
+.cat-item {
+  position: relative;
+
+  a,
+  span {
+    display: block;
+    line-height: 1em;
+    font-size: 20px;
+  }
+
+  a {
+    padding: 4px 0;
+  }
+
+  span {
+    position: absolute;
+    right: 25px;
+    top: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 2px 7px 5px;
+    background-color: #7D7D7D;
+    border-radius: 10px;
+  }
+
+}
+
+//Comments Widget
+.recentcomments {
+  font-size: 18px;
+  color: #ccc;
+
+  a {
+    text-transform: uppercase;
+  }
+
+  span {
+
+    &,
+    & a {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      padding-bottom: 4px;
+      margin-bottom: 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      text-transform: none;
+    }
+
+  }
+}
+
+
+
 
 
 
