@@ -19,14 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Edited popular posts widget and embedded basic contact form functionality">
+    <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Improved the functionality of the contact form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/graffiti.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/graffiti.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/templates/contact-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/templates/contact-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/graffiti.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/graffiti.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/graffiti.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/graffiti.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/theme-support.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/theme-support.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +103,7 @@
       <workItem from="1609276840437" duration="8005000" />
       <workItem from="1609285101670" duration="1294000" />
       <workItem from="1609286418939" duration="826000" />
-      <workItem from="1609320330798" duration="37519000" />
+      <workItem from="1609320330798" duration="40163000" />
     </task>
     <task id="LOCAL-00001" summary="Styled Load Previous Infinite Scroll">
       <created>1609147675978</created>
@@ -193,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609357891519</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Improved the functionality of the contact form">
+      <created>1609365287547</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609365287547</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +227,8 @@
     <MESSAGE value="Created and styled a dynamic sidebar" />
     <MESSAGE value="Created a popular posts custom widget" />
     <MESSAGE value="Edited popular posts widget and embedded basic contact form functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited popular posts widget and embedded basic contact form functionality" />
+    <MESSAGE value="Improved the functionality of the contact form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved the functionality of the contact form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="69" key="#PHP" timestamp="1607117986201">
@@ -259,10 +263,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="337" y="73" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609145330349" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609357893153">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609365289208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609357893153" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609365289208" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609187625997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

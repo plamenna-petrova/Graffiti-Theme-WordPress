@@ -252,5 +252,16 @@ function graffiti_get_post_navigation() {
 //    endif;
 }
 
+function mailtrap($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.mailtrap.io';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = 'a89c4098b4e0a4';
+    $phpmailer->Password = '95e4b2b8b4fd6f';
+}
+
+add_action('phpmailer_init', 'mailtrap');
+
 
 

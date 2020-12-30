@@ -128,7 +128,21 @@ function graffiti_save_contact(){
 
     $postID = wp_insert_post( $args );
 
-    echo $postID;
+    if($postID !== 0){
+
+        $to = get_bloginfo('admin_email');
+        $subject = 'Graffiti Contact Form - '.$title;
+
+        $headers[] = 'From: '.get_bloginfo('name').' <'.$to.'>'; //'From Tester <plamennavp@abv.bg>'
+        $headers[] = 'Reply-To: '.$title.' <'.$email.'>';
+        $headers[] = 'Content-Type: text/html: charset=UTF-8';
+
+        wp_mail( $to, $subject, $message, $headers);
+
+        echo $postID;
+    } else {
+        echo 0;
+    }
 
     //echo 0
 
