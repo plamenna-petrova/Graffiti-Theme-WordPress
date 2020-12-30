@@ -59,3 +59,25 @@ add_shortcode( 'popover', 'graffiti_popover');
  *
 */
 
+// Contact Form Shortcode
+
+function graffiti_contact_form ( $atts, $content = null ){
+
+    //[contact_form]
+
+    $atts = shortcode_atts(
+      array(),
+      $atts,
+      'contact_form'
+    );
+
+//    return 'This is the contact form generated HTML';
+    //return HTML
+    ob_start();
+    include 'templates/contact-form.php';
+    return ob_get_clean();
+
+}
+
+add_shortcode( 'contact_form', 'graffiti_contact_form');
+

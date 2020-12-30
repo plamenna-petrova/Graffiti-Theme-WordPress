@@ -10,6 +10,9 @@
 add_action('wp_ajax_nopriv_graffiti_load_more', 'graffiti_load_more');
 add_action('wp_ajax_graffiti_load_more', 'graffiti_load_more');
 
+add_action( 'wp_ajax_nopriv_graffiti_save_user_contact_form', 'graffiti_save_contact' );
+add_action( 'wp_ajax_graffiti_save_user_contact_form', 'graffiti_save_contact' );
+
 
 function graffiti_load_more()
 {
@@ -103,6 +106,35 @@ function graffiti_check_paged($num = null)
     }
 
 }
+
+function graffiti_save_contact(){
+
+    $title = wp_strip_all_tags($_POST["name"]);
+    $email = wp_strip_all_tags($_POST["email"]);
+    $message = wp_strip_all_tags($_POST["message"]);
+
+//    echo $title . ',' . $email . ',' .$message;
+
+    $args = array(
+      'post_title' => $title,
+      'post_content' => $message,
+      'post_author' => 1,
+      'post_status' => 'publish',
+      'post_type' => 'graffiti-contact',
+      'meta_input' => array(
+          '_contact_email_value_key' => $email
+      )
+    );
+
+    $postID = wp_insert_post( $args );
+
+    echo $postID;
+
+    die();
+
+}
+
+
 
 
 

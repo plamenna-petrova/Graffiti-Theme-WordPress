@@ -170,6 +170,49 @@ jQuery(document).ready(function ($) {
         $('.graffiti-overlay').fadeToggle(320);
     });
 
+    /* contact form submission */
+    $('#graffitiContactForm').on('submit', function(e){
+
+        e.preventDefault();
+
+        var form = $(this),
+            name = form.find('#name').val(),
+            email = form.find('#email').val(),
+            message = form.find('#message').val(),
+            ajaxUrl = form.data('url');
+
+        if( name === '' || email == '' || message == '' ){
+            console.log('Required inputs are empty');
+            return;
+        }
+
+        $.ajax({
+
+            url : ajaxUrl,
+            type : 'post',
+            data : {
+
+                name : name,
+                email : email,
+                message : message,
+                action: 'graffiti_save_user_contact_form'
+
+            },
+            error : function( response ){
+                console.log(response);
+            },
+            success : function( response ){
+                if( response == 0){
+                    console.log('Unable to save your message, Please try again later');
+                } else {
+                    console.log('Message saved, thank you!');
+                }
+            }
+
+        });
+
+    });
+
 });
 
 
