@@ -1412,6 +1412,32 @@ h2.widgettitle {
   }
 }
 
+/*
+    Additional widgets
+	=========================================
+*/
+
+.search-form {
+  margin-left: 10%;
+
+  .search-field {
+    border: 2px solid grey;
+    height: 36px;
+  }
+
+  .search-submit {
+    border: 2px solid grey;
+    margin-left: 30%;
+    height: 36px;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+
+}
+
 
 
 

@@ -1470,4 +1470,24 @@ h2.widgettitle {
   font-size: 25px;
 }
 
+/*
+    Additional widgets
+	=========================================
+*/
+.search-form {
+  margin-left: 10%;
+}
+.search-form .search-field {
+  border: 2px solid grey;
+  height: 36px;
+}
+.search-form .search-submit {
+  border: 2px solid grey;
+  margin-left: 30%;
+  height: 36px;
+}
+.search-form .search-submit:hover, .search-form .search-submit:focus {
+  color: red;
+}
+
 /*# sourceMappingURL=graffiti.css.map */
