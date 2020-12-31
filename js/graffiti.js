@@ -171,74 +171,72 @@ jQuery(document).ready(function ($) {
     });
 
     /* contact form submission */
-    $('#graffitiContactForm').on('submit', function(e){
+    /**Contact Form Submission */
+    $('#graffitiContactForm').on('submit', function (e) {
 
         e.preventDefault();
 
-        $('.has-error').removeClass('has-error');
+        $('.is-invalid').removeClass('is-invalid');
         $('.js-show-feedback').removeClass('js-show-feedback');
 
         var form = $(this),
             name = form.find('#name').val(),
             email = form.find('#email').val(),
             message = form.find('#message').val(),
-            ajaxurl = form.data('url');
+            ajaxUrl = form.data('url');
 
-        if( name === '' ){
-            $('#name').parent('.form-group').addClass('is-invalid');
+        if (name === '') {
+            $('#name').addClass('is-invalid');
             return;
         }
 
-        if( email === '' ){
-            $('#email').parent('.form-group').addClass('is-invalid');
+        if (email === '') {
+            $('#email').addClass('is-invalid');
             return;
         }
 
-        if( message === '' ){
-            $('#message').parent('.form-group').addClass('is-invalid');
+        if (message === '') {
+            $('#message').addClass('is-invalid');
             return;
         }
 
-        form.find('input, button, textarea').attr('disabled','disabled');
+        form.find('input,button,textarea').attr('disabled', 'disabled');
         $('.js-form-submission').addClass('js-show-feedback');
 
         $.ajax({
 
-            url : ajaxurl,
-            type : 'post',
-            data : {
-
-                name : name,
-                email : email,
-                message : message,
+            url: ajaxUrl,
+            type: 'post',
+            data: {
+                name: name,
+                email: email,
+                message: message,
                 action: 'graffiti_save_user_contact_form'
-
             },
-            error : function( response ){
+            error: function (response) {
                 $('.js-form-submission').removeClass('js-show-feedback');
                 $('.js-form-error').addClass('js-show-feedback');
                 form.find('input, button, textarea').removeAttr('disabled');
             },
-            success : function( response ){
-                if( response == 0 ){
+            success: function (response) {
+                if (response == 0) {
 
-                    setTimeout(function(){
+                    setTimeout(function () {
                         $('.js-form-submission').removeClass('js-show-feedback');
                         $('.js-form-error').addClass('js-show-feedback');
                         form.find('input, button, textarea').removeAttr('disabled');
-                    },1500);
+                    }, 1500);
 
                 } else {
 
-                    setTimeout(function(){
+                    setTimeout(function () {
                         $('.js-form-submission').removeClass('js-show-feedback');
                         $('.js-form-success').addClass('js-show-feedback');
                         form.find('input, button, textarea').removeAttr('disabled').val('');
-                    },1500);
+                    }, 1500);
 
                 }
             }
-
         });
 
     });

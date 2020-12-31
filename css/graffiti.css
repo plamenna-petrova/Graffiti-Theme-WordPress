@@ -1348,6 +1348,71 @@ h2.widgettitle {
     Contact form
 	=========================================
 */
+.graffiti-contact-form {
+  padding: 40px 0;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.graffiti-contact-form .form-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+.graffiti-contact-form .form-group:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #cbcbcb;
+}
+.graffiti-contact-form .form-group .form-control-msg {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+.graffiti-contact-form .form-group.is-invalid:before {
+  background-color: #a94442;
+}
+
+.graffiti-form-control {
+  resize: vertical;
+  border: none;
+  border-radius: 0;
+  padding: 8px 15px;
+  outline: none;
+  box-shadow: none !important;
+  --webkit-box-shadow: none !important;
+}
+.graffiti-form-control::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+.graffiti-form-control::-moz-placeholder {
+  text-transform: uppercase;
+}
+.graffiti-form-control:-moz-placeholder {
+  text-transform: uppercase;
+}
+.graffiti-form-control:hover, .graffiti-form-control:focus, .graffiti-form-control:active {
+  box-shadow: none;
+}
+
+.btn-graffiti-form {
+  -webkit-transition: all 320ms ease;
+  -moz-transition: all 320ms ease;
+  -ms-transition: all 320ms ease;
+  -o-transition: all 320ms ease;
+  transition: all 320ms ease;
+  color: #fff;
+  padding: 14px 60px;
+  font-size: 26px;
+}
+.btn-graffiti-form:hover, .btn-graffiti-form:focus, .btn-graffiti-form:active {
+  color: #fff;
+}
+
 .form-control-msg {
   display: none;
 }

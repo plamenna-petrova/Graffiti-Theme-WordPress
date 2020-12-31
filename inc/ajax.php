@@ -107,48 +107,42 @@ function graffiti_check_paged($num = null)
 
 }
 
-function graffiti_save_contact(){
-
+function graffiti_save_contact()
+{
     $title = wp_strip_all_tags($_POST["name"]);
     $email = wp_strip_all_tags($_POST["email"]);
     $message = wp_strip_all_tags($_POST["message"]);
 
-//    echo $title . ',' . $email . ',' .$message;
-
     $args = array(
-      'post_title' => $title,
-      'post_content' => $message,
-      'post_author' => 1,
-      'post_status' => 'publish',
-      'post_type' => 'graffiti-contact',
-      'meta_input' => array(
-          '_contact_email_value_key' => $email
-      )
+        'post_title'        => $title,
+        'post_content'      => $message,
+        'post_author'       => 1,
+        'post_status'       => 'publish',
+        'post_type'         => 'graffiti-contact',
+        'meta_input'        => array(
+            '_contact_email_value_key'  => $email
+        )
     );
 
-    $postID = wp_insert_post( $args );
+    $postID = wp_insert_post($args);
 
     if($postID !== 0){
+        $to         = get_bloginfo('admin_email');
+        $subject    = 'Graffiti Contact Form - '. $title;
 
-        $to = get_bloginfo('admin_email');
-        $subject = 'Graffiti Contact Form - '.$title;
+        $headers[]  = 'From: '.get_bloginfo('name').'<'.$to.'>'; //From: Tria <plamennavp@abv.com>
+        $headers[]  = 'Reply-To: '.$title.'<'.$email.'>';
+        $headers[]  = 'Content-Type: text/html: charset=UTF-8';
 
-        $headers[] = 'From: '.get_bloginfo('name').' <'.$to.'>'; //'From Tester <plamennavp@abv.bg>'
-        $headers[] = 'Reply-To: '.$title.' <'.$email.'>';
-        $headers[] = 'Content-Type: text/html: charset=UTF-8';
-
-        wp_mail( $to, $subject, $message, $headers);
-
-        echo $postID;
-    } else {
-        echo 0;
+        wp_mail($to, $subject, $message, $headers);
     }
 
-    //echo 0
+    echo $postID;
+    // echo 0;
 
     die();
-
 }
+
 
 
 

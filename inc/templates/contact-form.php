@@ -15,9 +15,11 @@
         <small class="form-control-msg invalid-feedback">Your Message is required</small>
     </div>
 
-    <button type="submit" class="btn btn-danger">Submit</button>
-    <small class="text-info form-control-msg js-form-submission">Submission in process, please wait..</small>
-    <small class="text-success form-control-msg js-form-success">Message Successfully submitted, thank you!</small>
-    <small class="text-danger form-control-msg js-form-error">There was a problem with the Contact Form, please try again!</small>
+    <div class="text-center">
+        <button type="submit" class="btn btn-danger btn-lg btn-graffiti-form">Submit</button>
+        <small class="text-info form-control-msg js-form-submission">Submission in process, please wait..</small>
+        <small class="text-success form-control-msg js-form-success">Message successfully submitted, thank you !</small>
+        <small class="text-danger form-control-msg js-form-error">There was a problem with the contact form , please try again !</small>
+    </div>
 
 </form>
