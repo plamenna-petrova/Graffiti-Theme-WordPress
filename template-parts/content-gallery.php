@@ -1,6 +1,7 @@
 <?php
 
 global $detect;
+
 /*
 @package graffititheme
     ===================
@@ -14,7 +15,7 @@ global $detect;
 
         <?php
 
-        if( graffiti_get_attachment()  ):
+        if( graffiti_get_attachment() && !$detect->isMobile() && !$detect->isTablet() ):
             $attachments = graffiti_get_attachment();
             ?>
             <div id="postGallery<?php the_ID(); ?>" class="carousel slide carousel-fade graffiti-carousel-thumb" data-ride="carousel">
@@ -109,6 +110,16 @@ global $detect;
     </header>
 
     <div class="entry-content">
+
+        <?php
+        $attachments = graffiti_get_attachment();
+        if( $attachments && ( $detect->isMobile() || $detect->isTablet() ) ):
+            ?>
+            <a class="standard-featured-link" href="<?php the_permalink(); ?>">
+                <div class="standard-featured background-image" style="background-image:url(<?php  echo $attachments[0]; ?>);">
+                </div>
+            </a>
+        <?php endif;?>
 
         <div class="entry-excerpt">
             <?php the_excerpt(); ?>

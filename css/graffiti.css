@@ -476,6 +476,12 @@ article {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media (max-width: 767px) {
+  article {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
 
 h1 {
   font-size: 48px;
@@ -496,6 +502,11 @@ h1.entry-title:before {
 }
 h1.entry-title:after {
   margin-left: 10px;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 26px;
+  }
 }
 
 .entry-meta {
@@ -540,6 +551,11 @@ h1.entry-title:after {
   left: 0;
   background-color: rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 767px) {
+  .standard-featured {
+    height: 220px;
+  }
 }
 
 .entry-excerpt {
@@ -611,6 +627,11 @@ h1.entry-title:after {
 .graffiti-format-image .entry-header {
   height: 600px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .graffiti-format-image .entry-header {
+    height: 220px;
+  }
 }
 .graffiti-format-image h1,
 .graffiti-format-image .entry-header {
@@ -700,6 +721,11 @@ audio {
 }
 .graffiti-format-gallery .standard-featured:after {
   background-color: transparent;
+}
+@media (max-width: 767px) {
+  .graffiti-format-gallery .standard-featured {
+    height: 220px;
+  }
 }
 .graffiti-format-gallery .carousel-control-prev, .graffiti-format-gallery .carousel-control-next {
   background: none;
@@ -817,6 +843,11 @@ audio {
 .graffiti-format-quote .quote-content p:after {
   content: "”";
   margin-left: 10px;
+}
+@media (max-width: 767px) {
+  .graffiti-format-quote .quote-content {
+    font-size: 22px;
+  }
 }
 .graffiti-format-quote .quote-author {
   color: #898989;
