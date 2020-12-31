@@ -55,7 +55,7 @@
                 </div>
             </div><!-- .header-content -->
 
-            <div class="nav-container">
+            <div class="nav-container d-none d-sm-block">
 
                 <nav class="navbar navbar-light navbar-graffiti">
                     <?php

@@ -19,15 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Added a connection to a Local SMTP Email Server with Mailtrap">
+    <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Fixed contact form bug and applied sass style to it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/graffiti.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/graffiti.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/templates/contact-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/templates/contact-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/graffiti.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/graffiti.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/base/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/graffiti.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/graffiti.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <workItem from="1609320330798" duration="40629000" />
       <workItem from="1609404877510" duration="2093000" />
       <workItem from="1609407946868" duration="3730000" />
-      <workItem from="1609411828411" duration="1738000" />
+      <workItem from="1609411828411" duration="7054000" />
     </task>
     <task id="LOCAL-00001" summary="Styled Load Previous Infinite Scroll">
       <created>1609147675978</created>
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609367998124</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fixed contact form bug and applied sass style to it">
+      <created>1609413842106</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609413842106</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +250,8 @@
     <MESSAGE value="Edited popular posts widget and embedded basic contact form functionality" />
     <MESSAGE value="Improved the functionality of the contact form" />
     <MESSAGE value="Added a connection to a Local SMTP Email Server with Mailtrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a connection to a Local SMTP Email Server with Mailtrap" />
+    <MESSAGE value="Fixed contact form bug and applied sass style to it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed contact form bug and applied sass style to it" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="69" key="#PHP" timestamp="1607117986201">
@@ -279,10 +286,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="337" y="73" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609145330349" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609367999650">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609413843510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609367999650" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609413843510" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609187625997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

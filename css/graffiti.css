@@ -376,6 +376,11 @@ a:hover, a:focus {
   display: block;
   height: 450px;
 }
+@media (max-width: 767px) {
+  .header-container {
+    height: 400px;
+  }
+}
 
 .site-title {
   color: #004d99;
@@ -410,6 +415,7 @@ a:hover, a:focus {
   min-height: auto;
   margin-bottom: 0;
   justify-content: flex-end;
+  padding: 0 15px;
 }
 .navbar-graffiti ul {
   float: right;
@@ -1423,6 +1429,14 @@ h2.widgettitle {
 
 .js-show-feedback {
   display: block;
+}
+
+/*
+    Sidebar menu
+	=========================================
+*/
+.navbar-nav.mr-auto.mt-2.mt-lg-0 li {
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=graffiti.css.map */
