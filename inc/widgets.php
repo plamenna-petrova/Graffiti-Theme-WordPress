@@ -37,6 +37,9 @@ class Graffiti_Profile_Widget extends WP_Widget
     {
 
         $picture = esc_attr(get_option('profile_picture'));
+
+        var_dump($picture);
+
         $firstName = esc_attr(get_option('first_name'));
         $lastName = esc_attr(get_option('last_name'));
         $fullName = $firstName . ' ' . $lastName;

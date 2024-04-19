@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,10 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf3bf00-8b40-44a1-8abd-5ee2fdd9f2bb" name="Default Changelist" comment="Applied and styled a search box widget">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/graffiti.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/graffiti.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/graffiti.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/graffiti.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/graffiti.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/walker.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/walker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/widgets.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,24 +46,43 @@
     <joomlaConfigPath />
     <joomlaPath />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="C:/Bitnami/wordpress-5.5.1-1" />
       <path value="C:/Bitnami/wordpress-5.5.1-1/apps/wordpress" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="1lD2rhBO5Fj7iRWNd43aOMYmeN6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Bitnami/wordpress-5.5.1-1/apps/wordpress" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14475.35" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,6 +130,8 @@
       <workItem from="1609404877510" duration="2093000" />
       <workItem from="1609407946868" duration="3730000" />
       <workItem from="1609411828411" duration="15532000" />
+      <workItem from="1713525553938" duration="1380000" />
+      <workItem from="1713531734105" duration="2697000" />
     </task>
     <task id="LOCAL-00001" summary="Styled Load Previous Infinite Scroll">
       <created>1609147675978</created>
@@ -251,7 +275,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Styled Load Previous Infinite Scroll" />
